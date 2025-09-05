@@ -4,8 +4,8 @@ A full-stack fitness tracking application built with **Azure Functions (API)** a
 The project logs workouts, calories, and activities, and visualizes progress with charts and stats.  
 
 Deployed on:  
-- 🌐 **Azure Static Web Apps** → [Live Demo](#)  
-- ▲ **Vercel** → [Live Demo](#) (optional link once you deploy)  
+- 🌐 **Azure Static Web Apps** → [Live Demo](https://wonderful-forest-08c0abc0f.1.azurestaticapps.net/)  
+- ▲ **Vercel** → [Live Demo](https://azure-fitness-tracker-icqm.vercel.app/) (optional link once you deploy)  
 
 ---
 
@@ -83,7 +83,7 @@ This project is connected to **GitHub Actions**. Pushing to `main` triggers a re
 ---
 
 ## 📸 Screenshots  
-*(add screenshots of your dashboard UI here)*  
+*(here)*  
 
 ---
 
@@ -97,8 +97,8 @@ This project is connected to **GitHub Actions**. Pushing to `main` triggers a re
 
 ## 👤 Author
 **Israel Odunaiya**  
-- 💼 [LinkedIn](#)  
-- 🌐 [Portfolio](#)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/oluwasegun-odunaiya-444387205/)  
+- 🌐 [Portfolio](https://profile-nine-sepia.vercel.app/)  
 - 🐙 [GitHub](https://github.com/Odunsegun)  
 
 ---
