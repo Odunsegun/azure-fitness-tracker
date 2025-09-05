@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
-import {
-  BarChart, LineChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
 } from "recharts";
 import { aggregateLogsByDate } from "../utils/aggregate";
 
