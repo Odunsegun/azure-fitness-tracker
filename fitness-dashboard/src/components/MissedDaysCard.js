@@ -3,14 +3,24 @@ import React from "react";
 
 export default function MissedDaysCard({ logs }) {
   const today = new Date();
+
+  // ✅ Generate last 7 days starting from Monday
   const last7Days = Array.from({ length: 7 }, (_, i) => {
     const d = new Date(today);
     d.setDate(today.getDate() - i);
     return d.toISOString().split("T")[0];
-  }).reverse();
+  })
+    .reverse()
+    .sort((a, b) => {
+      const dayA = new Date(a).getDay(); // 0=Sunday ... 6=Saturday
+      const dayB = new Date(b).getDay();
+      // Shift so Monday=0, Sunday=6
+      const normA = (dayA + 6) % 7;
+      const normB = (dayB + 6) % 7;
+      return normA - normB;
+    });
 
   const logDates = new Set(logs.map((l) => l.date));
-
   const missedDays = last7Days.filter((d) => !logDates.has(d)).length;
 
   return (
@@ -27,7 +37,9 @@ export default function MissedDaysCard({ logs }) {
       {/* ✅ Day grid */}
       <div className="flex gap-3">
         {last7Days.map((date) => {
-          const day = new Date(date).toLocaleDateString("en-US", { weekday: "short" });
+          const day = new Date(date).toLocaleDateString("en-US", {
+            weekday: "short",
+          });
           const logged = logDates.has(date);
 
           return (
